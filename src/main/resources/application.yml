@@ -1,0 +1,34 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: '587'
+    username: enter emeil from which u want to send emails
+    password: enter special app password to account mentioned above
+    properties:
+      mail:
+        smtp:
+          auth: 'true'
+          starttls:
+            enable: 'true'
+  datasource:
+    username: data base user
+    url: data base url
+    password: data base paaaword
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: 'true'
+server:
+  error:
+    include-message: always
+mail:
+  smtp:
+    debug: 'true'
+registration:
+  mail-subject: Please confirm your email
+  confirmation-link: http//localhost:8080/api/v1/registration/confirm?token=
+  confirmation-token-expiration-minutes: '10'
