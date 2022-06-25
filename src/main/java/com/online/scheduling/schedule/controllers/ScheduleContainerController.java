@@ -22,7 +22,8 @@ public class ScheduleContainerController {
     public void save(Authentication authentication, @RequestBody List<ScheduleContainer> scheduleContainers){
         containerService.saveAll(authentication, scheduleContainers);
     }
-
+    
+    @GetMapping
     public List<ScheduleContainer> get(@RequestParam(value = "userEmail") String userEmail,
                                        @RequestParam(name = "ids", required = false) Set<Long> ids){
         return containerService.getScheduleContainers(userEmail , ids);
