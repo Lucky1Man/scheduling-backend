@@ -44,5 +44,3 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 3. ### Delete all excluded directories or exclude them from the build path
 4. ### Provide configuration in .yml file
 5. ### Run the project
-
-# Apis documentation 
