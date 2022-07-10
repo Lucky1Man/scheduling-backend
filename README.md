@@ -24,7 +24,7 @@ Plans mentioned below are not final. In the future, I may adjust them according 
   - [x] Validating the client`s entered data
   - [x] Attaching User Account to every planned stuff that is created
   - [ ] Custom exceptions with HTTP codes
-- [ ] Writing tests for all contollers
+- [ ] Writing tests for all services
 - [ ] Trying to make code better
 - [ ] Implementing members feature
 - [ ] Validating the client`s entered data
