@@ -24,8 +24,8 @@ Plans mentioned below are not final. In the future, I may adjust them according 
   - [x] Validating the client`s entered data
   - [x] Attaching User Account to every planned stuff that is created
   - [ ] Custom exceptions with HTTP codes
-- [ ] Writing tests for all stuff mentioned above
-- [ ]  Trying to make code better
+- [ ] Writing tests for all contollers
+- [ ] Trying to make code better
 - [ ] Implementing members feature
 - [ ] Validating the client`s entered data
 - [ ] Implementing additional scurity
@@ -33,8 +33,8 @@ Plans mentioned below are not final. In the future, I may adjust them according 
   - [ ] Every user can acsess its entities and entities in which he is member
   - [ ] Implementing roles system for membership in schedule
 - [ ] Writing tests for all untested things mentioned above
-- [ ]  Trying to make code better
-- [ ]  Implementing global roles system
+- [ ] Trying to make code better
+- [ ] Implementing global roles system
 - [ ] Writing tests for all untested stuff mentioned above
 - [ ] Trying to make code better
 
