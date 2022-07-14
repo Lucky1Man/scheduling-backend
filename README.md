@@ -30,7 +30,7 @@ Plans mentioned below are not final. In the future, I may adjust them according 
   - [x] PlannedDayContainerService
   - [ ] PlannedDayService (TODO: finish update_successfully test)
   - [x] ScheduleContainerService
-  - [ ] PlannedActionService (TODO: finish update_successfully test)
+  - [ ] ScheduleService (TODO: finish update_successfully test)
 - [ ] Trying to make code better
 - [ ] Implementing members feature
 - [ ] Validating the client`s entered data
