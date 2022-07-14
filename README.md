@@ -49,4 +49,5 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 2. ### Install all the dependencies using maven
 3. ### Delete all excluded directories or exclude them from the build path
 4. ### Provide configuration in .yml file
-5. ### Run the project
+5. ### You need to uncomment init() method in SchedulingBasicConfig.class for once so that basic planned stuff containers will be inserted into your DB. After the first successful run, you have to comment init() method again.
+6. ### Run the project
