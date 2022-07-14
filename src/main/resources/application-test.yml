@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:{db}://localhost:{port}/{schema name}
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+#      create-drop
+#    show-sql: 'true'
+registration:
+  send-email: false
