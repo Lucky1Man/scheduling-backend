@@ -38,17 +38,26 @@ public class SchedulingBasicConfig {
 
     @PostConstruct
     protected void init(){
-//        actionContainerRepository.save(
-//                PlannedActionContainer.builder()
-//                        .name(basicPlannedActionContainerName)
-//                        .build());
-//        dayContainerRepository.save(
-//                PlannedDayContainer.builder()
-//                        .name(basicPlannedDayContainerName)
-//                        .build());
-//        scheduleContainerRepository.save(
-//                ScheduleContainer.builder()
-//                        .name(basicScheduleContainerName)
-//                        .build());
+        Optional<PlannedActionContainer> actionContainer = actionContainerRepository.findByName(basicPlannedActionContainerName);
+        if(actionContainer.isEmpty()) {
+            actionContainerRepository.save(
+                    PlannedActionContainer.builder()
+                            .name(basicPlannedActionContainerName)
+                            .build());
+        }
+        Optional<PlannedDayContainer> dayContainer = dayContainerRepository.findByName(basicPlannedDayContainerName);
+        if(dayContainer.isEmpty()){
+            dayContainerRepository.save(
+                    PlannedDayContainer.builder()
+                            .name(basicPlannedDayContainerName)
+                            .build());
+        }
+        Optional<ScheduleContainer> scheduleContainer = scheduleContainerRepository.findByName(basicScheduleContainerName);
+        if(scheduleContainer.isEmpty()){
+            scheduleContainerRepository.save(
+                    ScheduleContainer.builder()
+                            .name(basicScheduleContainerName)
+                            .build());
+        }
     }
 }
