@@ -352,7 +352,7 @@ class PlannedDayServiceTest {
 
 
     @Test
-    void update_successfully(){ //TODO : provide normal test
+    void update_successfully(){
         //given
         //configuring mock objects that will serve as day from db
         var previousDayContainer = new PlannedDayContainer(dayContainer);
