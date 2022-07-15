@@ -80,7 +80,6 @@ public class PlannedActionService {
         actionContainerService.save(authentication ,clearUpdatingActionRequest.getActionContainersToSave());
         for(var action : actions){
             PlannedAction currentActionFromDB = actionRepository.getById(action.getId());
-            action.copyProperties(currentActionFromDB);
             var plannedActionContainer = action.getPlannedActionContainer();
             if(plannedActionContainer != null)
                 currentActionFromDB.setPlannedActionContainer(plannedActionContainer);
@@ -100,6 +99,7 @@ public class PlannedActionService {
             if(remindBefore != null)
                 currentActionFromDB.setRemindBefore(remindBefore);
             result.add(currentActionFromDB);
+            action.copyProperties(currentActionFromDB);
         }
         return result;
     }
