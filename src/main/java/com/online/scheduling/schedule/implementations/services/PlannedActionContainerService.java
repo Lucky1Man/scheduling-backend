@@ -72,7 +72,6 @@ public class PlannedActionContainerService {
         actionContainers = new ClearUpdatingActionContainerRequest(actionContainers).getPlannedStuffContainers();
         for(var actionContainer : actionContainers){
             PlannedActionContainer currentActionContainerFromDB = actionContainerRepository.getById(actionContainer.getId());
-            actionContainer.copyProperties(currentActionContainerFromDB);
             String bgColor = actionContainer.getBgColor();
             if(bgColor != null)
                 currentActionContainerFromDB.setBgColor(bgColor);
@@ -80,6 +79,7 @@ public class PlannedActionContainerService {
             if(name != null)
                 currentActionContainerFromDB.setName(name);
             result.add(currentActionContainerFromDB);
+            actionContainer.copyProperties(currentActionContainerFromDB);
         }
         return result;
     }
