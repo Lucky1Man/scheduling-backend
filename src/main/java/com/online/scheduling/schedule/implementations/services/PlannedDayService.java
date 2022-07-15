@@ -102,7 +102,6 @@ public class PlannedDayService {
         int i = 0;
         for(var day : days){
             PlannedDay currentDayFromDB = dayRepository.getById(day.getId());
-            day.copyProperties(currentDayFromDB);
             PlannedDayContainer plannedDayContainer = day.getPlannedDayContainer();
             if(plannedDayContainer != null)
                 currentDayFromDB.setPlannedDayContainer(plannedDayContainer);
@@ -138,6 +137,7 @@ public class PlannedDayService {
             }
             i++;
             result.add(currentDayFromDB);
+            day.copyProperties(currentDayFromDB);
         }
         return result;
     }
