@@ -41,7 +41,7 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 - [ ] Writing tests for all untested things mentioned above
 - [ ] Trying to make code better
 - [ ] Implementing global roles system
-- [ ] Writing tests for all untested stuff mentioned above
+- [ ] Writing tests
 - [ ] Trying to make code better
 
 # Instalation process
