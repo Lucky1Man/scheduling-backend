@@ -95,7 +95,6 @@ public class ScheduleService {
         int i = 0;
         for(var schedule : schedules){
             Schedule currentScheduleFromDB = scheduleRepository.getById(schedule.getId());
-            schedule.copyProperties(currentScheduleFromDB);
             var scheduleContainer = schedule.getScheduleContainer();
             if(scheduleContainer != null)
                 currentScheduleFromDB.setScheduleContainer(scheduleContainer);
@@ -121,6 +120,7 @@ public class ScheduleService {
             }
             i++;
             result.add(currentScheduleFromDB);
+            schedule.copyProperties(currentScheduleFromDB);
         }
         return result;
     }
