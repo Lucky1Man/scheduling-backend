@@ -356,7 +356,7 @@ class ScheduleServiceTest {
 
 
     @Test
-    void update_successfully(){ //TODO: provide normal test
+    void update_successfully(){
         //given
         //configuring mock objects that will serve as day from db
         var previousScheduleContainer = new ScheduleContainer(scheduleContainer);
