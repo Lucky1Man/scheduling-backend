@@ -68,7 +68,6 @@ public class PlannedDayContainerService {
         dayContainers = new ClearUpdatingDayContainerRequest(dayContainers).getPlannedStuffContainers();
         for(var dayContainer : dayContainers){
             PlannedDayContainer currentPlannedDayContainerFromDB = dayContainerRepository.getById(dayContainer.getId());
-            dayContainer.copyProperties(currentPlannedDayContainerFromDB);
             String bgColor = dayContainer.getBgColor();
             if(bgColor != null)
                 currentPlannedDayContainerFromDB.setBgColor(bgColor);
@@ -76,6 +75,7 @@ public class PlannedDayContainerService {
             if(name != null)
                 currentPlannedDayContainerFromDB.setName(name);
             result.add(currentPlannedDayContainerFromDB);
+            dayContainer.copyProperties(currentPlannedDayContainerFromDB);
         }
         return result;
     }
