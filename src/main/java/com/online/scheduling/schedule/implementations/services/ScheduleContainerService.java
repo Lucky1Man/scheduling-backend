@@ -72,6 +72,7 @@ public class ScheduleContainerService {
             if(bgColor != null)
                 currentScheduleContainerFromDB.setBgColor(bgColor);
             result.add(currentScheduleContainerFromDB);
+            container.copyProperties(currentScheduleContainerFromDB);
         }
         return result;
     }
