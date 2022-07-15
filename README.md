@@ -28,9 +28,9 @@ Plans mentioned below are not final. In the future, I may adjust them according 
   - [x] PlannedActionContainerService
   - [x] PlannedActionService
   - [x] PlannedDayContainerService
-  - [ ] PlannedDayService (TODO: finish update_successfully test)
+  - [x] PlannedDayService
   - [x] ScheduleContainerService
-  - [ ] ScheduleService (TODO: finish update_successfully test)
+  - [x] ScheduleService
 - [ ] Trying to make code better
 - [ ] Implementing members feature
 - [ ] Validating the client`s entered data
@@ -47,5 +47,5 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 # Instalation process
 1. ### Clone this repository
 2. ### Install all the dependencies using maven
-3. ### Provide configuration in .yml file
+3. ### Provide configuration in .yml files
 4. ### Run the project
