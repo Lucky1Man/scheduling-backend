@@ -23,8 +23,8 @@ Plans mentioned below are not final. In the future, I may adjust them according 
   - [x] Schedule CRUD
   - [x] Validating the client`s entered data
   - [x] Attaching User Account to every planned stuff that is created
-  - [ ] Custom exceptions with HTTP codes
-- [ ] Writing tests
+  - [x] Custom exceptions with HTTP codes
+- [x] Writing tests
   - [x] PlannedActionContainerService
   - [x] PlannedActionService
   - [x] PlannedDayContainerService
