@@ -31,7 +31,7 @@ public class ClearSavingDayRequest {
     }
 
     private void init(){
-        plannedDays = GetStuffIfAllValid.getStuffIfAllValid(plannedDays, dayValidator);
+        plannedDays = GetStuffIfAllValid.getStuffIfAllValid(plannedDays, dayValidator, "planned day");
         setContainersToUpdate();
         dayContainersToSave = SchedulingProvider.getInitializer().getDayContainerInitializer().doInit(dayContainersToSave,plannedDays);
         plannedActionsToSave = SchedulingProvider.getInitializer().getActionInitializer().doInit(plannedActionsToSave,plannedDays);
