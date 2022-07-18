@@ -75,6 +75,8 @@ PD - stands for a planned day\
 SC - stands for schedule container\
 S - stands for schedule
 
+All (PAC, PA, PDC, PD, SC, S) are PS\
+
 PS - stands for planned stuff
 
 PS can be IPS and PSH at the same time(or one of them)
