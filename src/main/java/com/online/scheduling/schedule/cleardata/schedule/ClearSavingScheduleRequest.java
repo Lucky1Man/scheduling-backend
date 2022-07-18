@@ -30,7 +30,7 @@ public class ClearSavingScheduleRequest {
     }
 
     private void init(){
-        schedules = GetStuffIfAllValid.getStuffIfAllValid(schedules, scheduleValidator);
+        schedules = GetStuffIfAllValid.getStuffIfAllValid(schedules, scheduleValidator, "schedule");
         setContainersToUpdate();
         scheduleContainersToSave = SchedulingProvider.getInitializer().getScheduleContainerInitializer().doInit(scheduleContainersToSave,schedules);
         plannedDaysToSave = SchedulingProvider.getInitializer().getDayInitializer().doInit(plannedDaysToSave,schedules);
