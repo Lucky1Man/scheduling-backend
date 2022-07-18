@@ -10,6 +10,14 @@ import java.util.List;
 @Configuration
 @Qualifier("UserConfig")
 public class UserConfig {
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    
+    public UserConfig(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+    
     public Collection<IUserValidatorComponent> getValidators() {
         return List.of(
         );
