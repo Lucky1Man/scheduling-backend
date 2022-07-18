@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ClearSavingScheduleContainerRequest extends ClearSavingPlannedStuffContainerRequestTemplate<ScheduleContainer> {
     public ClearSavingScheduleContainerRequest(List<ScheduleContainer> plannedStuff) {
-        super(plannedStuff);
+        super(plannedStuff, "schedule container");
     }
 
     @Override
