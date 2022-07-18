@@ -10,7 +10,7 @@ import java.util.List;
 public class ClearSavingActionContainerRequest extends ClearSavingPlannedStuffContainerRequestTemplate<PlannedActionContainer> {
 
     public ClearSavingActionContainerRequest(List<PlannedActionContainer> plannedStuff) {
-        super(plannedStuff);
+        super(plannedStuff, "planned action container");
     }
 
     @Override
