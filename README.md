@@ -8,6 +8,12 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 #### The username is: test
 #### The password is: 1
 
+# Instalation process
+1. ### Clone this repository
+2. ### Install all the dependencies using maven
+3. ### Provide configuration in .yml files
+4. ### Run the project
+
 ## Plans
 - [x] Registration api
   - [ ] User CRUD (creation is done all other will be implemented duaring implementation of global roles)
@@ -49,9 +55,5 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 - [ ] Implementing global roles system
 - [ ] Writing tests
 - [ ] Trying to make code better
+![Без назви-1](https://user-images.githubusercontent.com/86126779/179522742-5ea4f6e0-ee7a-46e6-b98a-d289afba3bdd.png)
 
-# Instalation process
-1. ### Clone this repository
-2. ### Install all the dependencies using maven
-3. ### Provide configuration in .yml files
-4. ### Run the project
