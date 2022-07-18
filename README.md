@@ -167,6 +167,7 @@ PS can be IPS and PSH at the same time(or one of them)
 ##### Surely the logical tree can be entered at any point but must follow the direction of the arrows:
 ![image](https://user-images.githubusercontent.com/86126779/179602438-b13b99a0-1750-4cfe-aeaa-452c69a10d4b.png)
 
+#### Notes 5 and 6 are applicable for all(PAC, PA, PDC, PD, SC, S);
 5) If you are saving PSH(or IPS) you can not specify its id if you do, an exception will be thrown. At the same time, (only if the object is of PSH type as well), if PSH contains IPS you can write the id of IPS(which means that you want to update the existing IPS and if IPS is not in PSH it will be then added), if you don't specify the id of IPS this means that you want to create new IPS and add it to this PSH.\
 You can do this in the same logical tree as in note 4(all entering points are supported as well).
 ### Examples:
