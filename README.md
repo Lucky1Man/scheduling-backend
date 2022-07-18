@@ -2,7 +2,8 @@
   
 Plans mentioned below are not final. In the future, I may adjust them according to my own considerations. But the main concept will not be changed.
 
-### If u want to look at api that my code provides you can go through the instalation process described below.
+### If u want to look at api that my code provides you can go through the instalation process described below
+(Also I strongly advise looking at api notes that I left in this README.md file. They are below the definitions section).
 ### Then run the project with property registration.send-email: false. 
 ### Then enter this url: http://localhost:8080/swagger-ui/index.html
 #### The username is: test
@@ -84,7 +85,7 @@ PS can be IPS and PSH at the same time(or one of them)
 #### PD(PA, PDC)
 #### S(PD, SC)
 
-# API NOTES:
+# API NOTES(6 notes):
 1) If you want to add existing PA into PD you can send a request like this(you can add as many PA as you want):
 ```json
 [
