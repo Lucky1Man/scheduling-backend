@@ -12,14 +12,17 @@ public abstract class ClearSavingPlannedStuffContainerRequestTemplate <T extends
     @Getter
     private List<T> plannedStuffContainers;
     private final IPlannedStuffValidator<T> stuffValidator;
+    private final String containerName;
 
-    public ClearSavingPlannedStuffContainerRequestTemplate(List<T> plannedStuffContainers) {
+    public ClearSavingPlannedStuffContainerRequestTemplate(List<T> plannedStuffContainers, String name) {
         this.plannedStuffContainers = plannedStuffContainers;
         this.stuffValidator = initPlannedStuffValidator();
+        this.containerName = name;
         init();
     }
+    
     protected abstract IPlannedStuffValidator<T> initPlannedStuffValidator();
     protected void init(){
-        plannedStuffContainers = GetStuffIfAllValid.getStuffIfAllValid(plannedStuffContainers,stuffValidator);
+        plannedStuffContainers = GetStuffIfAllValid.getStuffIfAllValid(plannedStuffContainers,stuffValidator, containerName);
     }
 }
