@@ -14,4 +14,12 @@ public class UserConfig {
         return List.of(
         );
     }
+    
+    @PostConstruct
+    private void setUpDefaultUser(){
+        Optional<User> test = userRepository.findByEmail("test");
+        if(test.isEmpty())
+            userRepository.save(User.builder().email("test").firstName("test").lastName("test").locked(false).password(passwordEncoder.encode("1")).enabled(true).build());
+    }
 }
+
