@@ -2,11 +2,11 @@
   
 Plans mentioned below are not final. In the future, I may adjust them according to my own considerations. But the main concept will not be changed.
 
-## If u want to look at api that my code provides you can go through the instalation process described below.
-Then run the project with property registration.send-email: false. 
-Then enter this url: http://localhost:8080/swagger-ui/index.html
-The username is: test
-The password is: 1
+### If u want to look at api that my code provides you can go through the instalation process described below.
+### Then run the project with property registration.send-email: false. 
+### Then enter this url: http://localhost:8080/swagger-ui/index.html
+#### The username is: test
+#### The password is: 1
 
 ## Plans
 - [x] Registration api
