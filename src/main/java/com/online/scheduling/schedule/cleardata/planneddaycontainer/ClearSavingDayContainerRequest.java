@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ClearSavingDayContainerRequest extends ClearSavingPlannedStuffContainerRequestTemplate<PlannedDayContainer> {
     public ClearSavingDayContainerRequest(List<PlannedDayContainer> plannedStuff) {
-        super(plannedStuff);
+        super(plannedStuff,"planned day container");
     }
 
     @Override
