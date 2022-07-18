@@ -1,0 +1,46 @@
+spring:
+  mail:
+  # This property must be delared at application.yml
+    host: smtp.gmail.com 
+     # This property must be delared at application.yml
+    port: '587'
+    # if you dont want to send emails just dont fill this property and set registration.send-email: 'false'. But this property must be delared at application.yml
+    username: {mail from which u going to send emails}
+    # if you dont want to send emails just dont fill this property and set registration.send-email: 'false'. But this property must be delared at application.yml
+    password: {special password}
+    properties:
+      mail:
+        smtp:
+          debug: 'true'
+          auth: 'true'
+          starttls:
+            enable: 'true'
+  datasource:
+    username: root
+    url: jdbc:{db}://localhost:{port}/{schema name}
+    password: your data base password
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+#      create-drop
+#    show-sql: 'true'
+server:
+  error:
+    include-message: always
+mail:
+  smtp:
+    debug: 'true'
+registration:
+  send-email: 'true'
+  mail-subject: Please confirm your email
+  confirmation-link: http://localhost:8080/api/v1/registration/confirm?token=
+  confirmation-token-expiration-minutes: '10'
+scheduling:
+  config:
+    basic-planned-action-container: basic planned action container
+    basic-planned-day-container: basic planned day container
+    basic-schedule-container: basic schedule container
