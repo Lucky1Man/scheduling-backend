@@ -55,5 +55,8 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 - [ ] Implementing global roles system
 - [ ] Writing tests
 - [ ] Trying to make code better
+
+# Structure of schedule
+
 ![Без назви-1](https://user-images.githubusercontent.com/86126779/179522742-5ea4f6e0-ee7a-46e6-b98a-d289afba3bdd.png)
 
