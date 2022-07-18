@@ -28,7 +28,7 @@ public class ClearSavingActionRequest {
     }
 
     private void init(){
-        plannedActions = GetStuffIfAllValid.getStuffIfAllValid(plannedActions,actionValidator);
+        plannedActions = GetStuffIfAllValid.getStuffIfAllValid(plannedActions,actionValidator, "planned action");
         getContainersToUpdate();
     }
 
