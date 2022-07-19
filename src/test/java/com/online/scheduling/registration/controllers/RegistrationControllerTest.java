@@ -14,9 +14,11 @@ import com.online.scheduling.user.entities.User;
 import com.online.scheduling.user.repositories.UserRepository;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.mock.mockito.SpyBean;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -26,7 +28,10 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.when;
 
 @SpringBootTest(properties = "spring.profiles.active=test")
 class RegistrationControllerTest {
@@ -34,6 +39,7 @@ class RegistrationControllerTest {
     @Autowired
     RegistrationController registrationController;
     @Autowired
+    @SpyBean
     RegistrationRequestServiceImpl registrationRequestService;
     @MockBean
     ConfirmationTokenService confirmationTokenService;
@@ -114,9 +120,10 @@ class RegistrationControllerTest {
 
     @Test
     @Order(4)
-    void register_successful() {
+    void register_successfully() {
         //given
         given(userRepository.findByEmail(REQ.getEmail())).willReturn(Optional.empty());
+        doNothing().when(registrationRequestService).confirmToken(any(String.class));
         //then
         assertDoesNotThrow(()->registrationController.register(REQ));
     }
