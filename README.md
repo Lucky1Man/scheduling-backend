@@ -4,6 +4,7 @@ Plans mentioned below are not final. In the future, I may adjust them according 
 
 ### If u want to look at api that my code provides you can go through the instalation process described below
 (Also I strongly advise looking at api notes that I left in this README.md file. They are below the definitions section).
+### If you just want to look API that my project has it is not necessary to provide any config in application.yml but if you want to test sending email, or want a real database you need to provide configs described in application.yml
 ### Then run the project with property registration.send-email: false. 
 ### Then enter this url: http://localhost:8080/swagger-ui/index.html
 #### The username is: test
