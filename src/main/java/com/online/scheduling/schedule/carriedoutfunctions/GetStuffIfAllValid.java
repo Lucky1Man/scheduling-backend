@@ -1,5 +1,6 @@
 package com.online.scheduling.schedule.carriedoutfunctions;
 
+import com.online.scheduling.exceptions.UnableToExecuteQueryException;
 import com.online.scheduling.schedule.interfaces.IPlannedStuff;
 import com.online.scheduling.schedule.interfaces.validator.IPlannedStuffValidator;
 
