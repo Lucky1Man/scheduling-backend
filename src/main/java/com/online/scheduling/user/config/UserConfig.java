@@ -1,11 +1,16 @@
 package com.online.scheduling.user.config;
 
+import com.online.scheduling.user.entities.User;
 import com.online.scheduling.user.interfaces.IUserValidatorComponent;
+import com.online.scheduling.user.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.annotation.PostConstruct;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 @Configuration
 @Qualifier("UserConfig")
