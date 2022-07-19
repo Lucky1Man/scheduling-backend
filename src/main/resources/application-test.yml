@@ -1,6 +1,7 @@
 spring:
   datasource:
-    url: jdbc:{db}://localhost:{port}/{test schema name}
+    #another database for tests
+    #url: jdbc:{db}://localhost:{port}/{test schema name}
   jpa:
     hibernate:
       ddl-auto: create-drop
