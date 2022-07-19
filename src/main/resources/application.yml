@@ -1,13 +1,13 @@
 spring:
   mail:
-  # This property must be delared at application.yml
+  # This property must be declared at application.yml
     host: smtp.gmail.com 
-     # This property must be delared at application.yml
+     # This property must be declared at application.yml
     port: '587'
-    # if you dont want to send emails just dont fill this property and set registration.send-email: 'false'. But this property must be delared at application.yml
-    username: {mail from which u going to send emails}
-    # if you dont want to send emails just dont fill this property and set registration.send-email: 'false'. But this property must be delared at application.yml
-    password: {special password}
+    # if you don`t want to send emails just don`t fill this property and set registration.send-email: 'false'. But this property must be declared at application.yml
+    username: mail from which u going to send emails
+    # if you don`t want to send emails just don`t fill this property and set registration.send-email: 'false'. But this property must be declared at application.yml
+    password: special password
     properties:
       mail:
         smtp:
@@ -16,18 +16,26 @@ spring:
           starttls:
             enable: 'true'
   datasource:
-    username: root
-    url: jdbc:{db}://localhost:{port}/{schema name}
-    password: your data base password
+    #config for h2 db if you want real database you can provide configs described below
+    #also you need to add dependency into pom.xml for you database connector
+    username: sa
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    password: ''
+#    username: {your database username here}
+#    url: jdbc:{db}://localhost:{port}/{schema name}
+#    password: your database password
+
   jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-#        format_sql: 'true'
+    #config for h2 database
+    database-platform: org.hibernate.dialect.H2Dialect
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
     hibernate:
       ddl-auto: update
-#      create-drop
-#    show-sql: 'true'
+
 server:
   error:
     include-message: always
@@ -35,7 +43,7 @@ mail:
   smtp:
     debug: 'true'
 registration:
-  send-email: 'true'
+  send-email: 'false'
   mail-subject: Please confirm your email
   confirmation-link: http://localhost:8080/api/v1/registration/confirm?token=
   confirmation-token-expiration-minutes: '10'
