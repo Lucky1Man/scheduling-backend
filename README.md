@@ -1,6 +1,6 @@
 # Welcome to Scheduling-backend project
 
-## Currently I stopped developing this project because I am reading Clean Code by Robert C. Martin. After reading a book I will continue developing a project.
+## I stopped developing this project because I am currently doing the course
 
 Plans mentioned below are not final. In the future, I may adjust them according to my own considerations. But the main concept will not be changed.
 
