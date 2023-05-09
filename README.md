@@ -1,6 +1,6 @@
 # Welcome to Scheduling-backend project
 
-## I stopped developing this project because I am currently doing the course
+## I stopped developing this project because I progresses far and start understanding that code on this project is so awful that it will take less time to write another from the scratch
 
 Plans mentioned below are not final. In the future, I may adjust them according to my own considerations. But the main concept will not be changed.
 
